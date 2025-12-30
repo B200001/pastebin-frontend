@@ -26,7 +26,7 @@ export default function CreatePaste() {
         return;
       }
 
-      const url = `http://localhost:5173/p/${res.id}`;
+      const url = `${window.location.origin}/p/${res.id}`;
       setResult(url);
 
       const createdAt = Date.now();
