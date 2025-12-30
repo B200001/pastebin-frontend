@@ -1,0 +1,333 @@
+/* ================= GLOBAL RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ================= THEME VARIABLES ================= */
+
+:root{
+    --pri: #EBE1D1;
+    --pri2: #ebe1d1d1;
+    --sec: #41644A;
+    --tri: #0D4715;
+    --quad:#E9762B;
+    --pent: #061E29;
+    --sec2: #1D546D;
+}
+
+/* ---------- Default Theme ---------- */
+.theme-default{
+    --pri: #EBE1D1;
+    --pri2: #ebe1d1d1;
+    --sec: #41644A;
+    --tri: #0D4715;
+    --quad:#E9762B;
+    --pent: #061E29;
+    --sec2: #1D546D;
+}
+
+/* ---------- Ocean Theme ---------- */
+.theme-ocean{
+    --pri: #E6F4F9;
+    --pri2: #D9EEF5;
+    --sec: #1D546D;
+    --tri: #0E3B4F;
+    --quad: #3BA7C9;
+    --pent: #082F3F;
+    --sec2: #1D546D;
+}
+
+/* ---------- Dark Theme ---------- */
+.theme-dark{
+    --pri: #E5E5E5;
+    --pri2: #2A2A2A;
+    --sec: #444;
+    --tri: #111;
+    --quad: #4FC3F7;
+    --pent: #0B0B0B;
+    --sec2: #4FC3F7;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--pent);
+    color: var(--pri);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--pri);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: translateY(-2px);
+}
+
+.nav_second{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav_second a{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--pri);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav_second a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--quad);
+    transition: width 0.3s ease;
+}
+
+.nav_second a:hover::after{
+    width: 100%;
+}
+
+.nav_second a:hover{
+    color: var(--quad);
+}
+
+.nav_third button{
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--quad);
+    background: transparent;
+    color: var(--pri);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav_third button:hover{
+    background-color: var(--quad);
+    color: white;
+}
+
+.nav_third button:active{
+    transform: scale(0.96);
+}
+
+/* ================= HOME PAGE ================= */
+
+.home{
+    height: 100vh;
+    background-color: var(--pent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+    color: var(--pri);
+    animation: fadeUp 1s ease forwards;
+}
+
+.title{
+    font-size: 3.5rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+.subtitle{
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.create-btn{
+    margin-top: 30px;
+    padding: 14px 36px;
+    border-radius: 30px;
+    border: none;
+    background: var(--pri);
+    color: var(--pent);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-btn:hover{
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ================= CREATE PASTE PAGE ================= */
+
+.createPaste{
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--tri), var(--sec2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.96);
+    border-radius: 2rem;
+    padding: 6.2rem;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeUp 0.8s ease forwards;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.main_form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+textarea,
+input{
+    padding: 12px;
+    border-radius: 8px;
+    min-width: 400px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+button{
+    padding: 1.2rem;
+    border-radius: 30px;
+    margin-top: 1rem;
+    border: none;
+    background: var(--sec2);
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= VIEW PASTE PAGE ================= */
+
+.viewPaste{
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--tri), var(--sec2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.pasteCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.96);
+    border-radius: 2rem;
+    padding: 4rem;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeUp 0.8s ease forwards;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+pre{
+    background: #f4f7f9;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--sec2);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* ================= ABOUT PAGE ================= */
+
+.about{
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--tri), var(--sec2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    padding: 33px;
+}
+
+.aboutCard{
+    background: rgba(255,255,255,0.97);
+    border-radius: 2rem;
+    padding: 4.2rem;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeUp 0.9s ease forwards;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.intro{
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+.resumeSection{
+    margin-top: 2rem;
+}
+
+.resumeViewer{
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.downloadBtn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: var(--sec2);
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= COMMON ================= */
+
+.success{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+    from{ opacity:0; transform:translateY(40px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes float{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+    100%{ transform:translateY(0); }
+}
