@@ -15,11 +15,11 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className="nav_first">
-        <Link to="/" className="logo">Pastebin</Link>
+        <Link to="/" className="logo">Pastebin-Lite</Link>
       </div>
 
       <div className="nav_second">
-        <Link to="/about">About Us</Link>
+        <Link to="/about">About Me</Link>
         {/* <Link to="/api">Health Check</Link> */}
         <Link to="/create">Create</Link>
         <Link to="/my-pastes">My Pastes</Link>
