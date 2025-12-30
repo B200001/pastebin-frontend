@@ -14,3 +14,43 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+---
+
+# 📗 FRONTEND — `frontend/README.md`
+
+👉 **Copy everything below into `frontend/README.md`**
+
+```md
+# Pastebin-Lite Frontend
+
+This is the frontend for **Pastebin-Lite**, a minimal Pastebin-style application.
+It allows users to create pastes, receive a shareable link, and view pastes
+through a simple web interface.
+
+The frontend is built using **Vite + React (JavaScript)** and deployed on **Vercel**.
+
+---
+
+## Features
+
+- Create a text paste
+- Optional TTL and view limits
+- Display shareable paste URL
+- View paste content via shared link
+- Clear error messages for expired or invalid pastes
+- Minimal UI (functionality-focused)
+
+---
+
+## Tech Stack
+
+- Vite
+- React (JavaScript)
+- React Router
+- Fetch API
+- Vercel (static hosting)
+
+
+
